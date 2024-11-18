@@ -138,7 +138,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
             bindings = <
                 &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                &trans  &trans          &trans      &kp C_BRI_DN        &kp C_BRI_UP    &tog LOCK
                 &trans      &trans          &trans          &trans          &trans          &trans                      &trans  &trans          &trans      &trans              &trans          &trans
-                &trans      &trans          &trans          &trans          &trans          &trans                      &reset  &trans          &trans      &trans              &trans          &trans
+                &trans      &trans          &trans          &trans          &trans          &trans                      &trans  &trans          &trans      &trans              &trans          &trans
                                                             &trans          &trans          &trans                      &trans  &trans          &trans
             >;
         };
