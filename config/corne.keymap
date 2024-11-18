@@ -43,7 +43,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
         td0: tap_dance_CAPSLOCK {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&kp CAPSLOCK>;
         };
@@ -57,14 +57,14 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
         td2:tap_dance_toggle_capa{
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&tog LOWER>, <&tog OPTION>;
         };
 
         td3:tap_dance_mo_toggle{
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <200>;
             bindings = <&mo RAISE>, <&tog LOCK>;
         };
