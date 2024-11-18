@@ -95,7 +95,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
                 &ht ESC TAB  &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I                   &kp O                   &kp P       &kp BACKSPACE
                 &td0            &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K                   &kp L                   &kp UP      &ht DELETE SQT
                 &kp LCTRL       &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &ht SEMI COMMA       &ht COLON DOT        &kp SLASH   &kp MINUS
-                                                    &kp LALT    &td2    &kp SPACE           &kp ENTER   &kp LGUI    &td3
+                                                    &kp LALT    &td1    &kp SPACE           &kp ENTER   &kp LGUI    &td2
             >;
         };
 		// number arrows and media
