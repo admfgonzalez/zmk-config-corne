@@ -29,22 +29,6 @@ Por lo tanto, la principal diferencia entre &mt y &kt es que &mt está limitado 
 mantener presionada, mientras que &kt puede asignar cualquier comportamiento a la acción de mantener presionada.
 */
 
-#define TAPPING_TERM 240
-#define QUICK_TAP_MS 140  // TAPPING_TERM - 100
-
-&mt {
-    flavor          = "tap-preferred";
-    quick-tap-ms    = <QUICK_TAP_MS>;
-    tapping-term-ms = <TAPPING_TERM>;
-};
-
-#define ESC_TAB  &mt ESC TAB
-#define DELETE_SQT  &mt DELETE SQT
-#define COLON_DOT  &mt COLON DOT
-#define SEMI_COMMA &mt SEMI COMMA 
-#define C_RW_C_PREV &mt C_RW C_PREV
-#define C_FF_C_NEXT &mt C_FF C_NEXT
-
 / {
     behaviors {        
         ht: hold-tap {
