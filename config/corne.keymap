@@ -82,13 +82,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         macro1: macro1 {
             compatible = "zmk,behavior-macro";
             label = "alt_f4";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings = <&kp LALT &kp F4>;
         };
         passVeridata: passVeridata {
             compatible = "zmk,behavior-macro";
             label = "pass-veridata";
-            #binding-cells = <1>;
+            #binding-cells = <0>;
             bindings = <&kp A &kp B &kp C &kp D &kp UNDER &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4>;
         };
     };
