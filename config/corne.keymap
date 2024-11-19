@@ -31,13 +31,13 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 / {
     behaviors {
         pht: positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1>;    // <---[[the W key]]
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <200>;
+                require-prior-idle-ms = <125>;
+                bindings = <&kp>, <&kp>;
         };
         
         td0: tap_dance_CAPSLOCK {
