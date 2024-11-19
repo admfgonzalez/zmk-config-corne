@@ -50,7 +50,7 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
         ht: hold-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping_term_ms = <200>;
             bindings =
                 <&kp>,
