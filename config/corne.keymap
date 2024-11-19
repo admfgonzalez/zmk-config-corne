@@ -47,6 +47,16 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
 / {
     behaviors {        
+        ht: hold-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "hold-tap";
+            #binding-cells = <0>;
+            tapping_term_ms = <200>;
+            bindings =
+                <&kp>,
+                <&kp>;
+        };
+
         td0: tap_dance_CAPSLOCK {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
