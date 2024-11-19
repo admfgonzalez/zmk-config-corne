@@ -29,22 +29,20 @@ Por lo tanto, la principal diferencia entre &mt y &kt es que &mt está limitado 
 mantener presionada, mientras que &kt puede asignar cualquier comportamiento a la acción de mantener presionada.
 */
 &mt {
-	retro-tap;
+    flavor          = "tap-preferred";
+    quick-tap-ms    = <QUICK_TAP_MS>;
+    tapping-term-ms = <TAPPING_TERM>;
 };
 
+#define ESC_TAB  &mt ESC TAB
+#define DELETE_SQT  &mt DELETE SQT
+#define COLON_DOT  &mt COLON DOT
+#define SEMI_COMMA &mt SEMI COMMA 
+#define C_RW_C_PREV &mt C_RW C_PREV
+#define C_FF_C_NEXT &mt C_FF C_NEXT
+
 / {
-    behaviors {
-        pht: positional_hold_tap {
-                compatible = "zmk,behavior-hold-tap";
-                label = "POSITIONAL_HOLD_TAP";
-                #binding-cells = <2>;
-                flavor = "hold-preferred";
-                tapping-term-ms = <400>;
-                quick-tap-ms = <200>;
-                bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = <1>;    // <---[[the W key]]
-        };
-        
+    behaviors {        
         td0: tap_dance_CAPSLOCK {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <2>;
@@ -96,18 +94,18 @@ mantener presionada, mientras que &kt puede asignar cualquier comportamiento a l
 
         default_layer {
             bindings = <
-                &pht ESC TAB  &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I                   &kp O                   &kp P       &kp BACKSPACE
-                &td0            &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K                   &kp L                   &kp UP      &pht DELETE SQT
-                &kp LCTRL       &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       &pht SEMI COMMA       &pht COLON DOT        &kp SLASH   &kp MINUS
+                ESC_TAB         &kp Q       &kp W       &kp E       &kp R   &kp T               &kp Y       &kp U       &kp I                   &kp O                   &kp P       &kp BACKSPACE
+                &td0            &kp A       &kp S       &kp D       &kp F   &kp G               &kp H       &kp J       &kp K                   &kp L                   &kp UP      DELETE_SQT
+                &kp LCTRL       &kp Z       &kp X       &kp C       &kp V   &kp B               &kp N       &kp M       SEMI_COMMA              COLON_DOT        &kp SLASH   &kp MINUS
                                                     &kp LALT    &td1    &kp SPACE           &kp ENTER   &kp LGUI    &td2
             >;
         };
 		// number arrows and media
         layer_lower {
             bindings = <
-                &pht ESC TAB  &kp KP_N1               &kp KP_N2               &kp KP_N3           &kp KP_N4   &kp KP_N5                   &kp KP_N6   &kp KP_N7   &kp KP_N8    &kp KP_N9              &kp KP_N0   &kp BACKSPACE
+                ESC_TAB         &kp KP_N1               &kp KP_N2               &kp KP_N3           &kp KP_N4   &kp KP_N5                   &kp KP_N6   &kp KP_N7   &kp KP_N8    &kp KP_N9              &kp KP_N0   &kp BACKSPACE
                 &trans          &kp C_VOL_UP            &kp K_VOL_DN            &kp C_MUTE          &none       &none                       &none       &kp UP      &none        &none                  &none       &kp DELETE
-                &trans          &pht C_RW C_PREV      &pht C_FF C_NEXT      &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT    &pht COLON DOT       &trans      &kp PRINTSCREEN
+                &trans          C_RW_C_PREV             C_FF_C_NEXT      &kp C_PLAY_PAUSE    &kp HOME    &kp END                     &kp LEFT    &kp DOWN    &kp RIGHT       COLON_DOT       &trans      &kp PRINTSCREEN
                                                                                 &trans              &trans      &trans                      &trans      &kp RALT    &trans 
             >;
         };
